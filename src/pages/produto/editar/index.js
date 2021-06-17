@@ -135,7 +135,7 @@ class EditarCliente extends Component {
     handleSubmit = event => {
         const { id } = this.state.produto;
  
-        fetch(`${process.env.REACT_APP_API_URL}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/${id}`, {
             method: "put",
             body: JSON.stringify(this.state.produto),
             headers: {
